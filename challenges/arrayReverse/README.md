@@ -8,4 +8,4 @@ Create a function that reverses an array without using .reverse()
 This function establishes an empty array then uses unshift() to add the items in the passed in array to the new array in reverse order.
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![Whiteboard](./assets/whiteboard.JPG)
