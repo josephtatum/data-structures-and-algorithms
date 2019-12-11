@@ -21,4 +21,11 @@ describe('linked list tests', () => {
             'length': 1
         });
     });
+
+    it('finds a node in a linked list', () => {
+        const newNode = new Node(5);
+        const newList = new LinkedList;
+        newList.insert(newNode);
+        expect(newList.includes(newNode)).toBeTruthy;
+    });
 });
