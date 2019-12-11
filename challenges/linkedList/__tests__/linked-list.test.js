@@ -8,10 +8,17 @@ describe('linked list tests', () => {
     });
 
     it('inserts into the list', () => {
-        const newNode = new Node(5, 4);
+        const newNode = new Node(5);
         const newList = new LinkedList;
         newList.insert(newNode);
-        console.log(newList);
-        expect(newList).toEqual({ 'head': { 'next': null, 'value': 5 }, 'length': 0 });
+        expect(newList).toEqual({
+            'head': {
+                'next': null,
+                'value': {
+                    'next': null, 'value': 5
+                }
+            },
+            'length': 1
+        });
     });
 });

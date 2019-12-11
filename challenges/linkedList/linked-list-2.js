@@ -12,8 +12,18 @@ class LinkedList {
     }
 
     insert(value) {
-        let newNode = new Node(value, this.head);
-        this.head = newNode;
+        let newNode = new Node(value);
+        let currentNode;
+
+        if(this.head === null)
+            this.head = newNode;
+        else {
+            currentNode = this.head; 
+            while(currentNode.next) { currentNode = currentNode.next; }
+            currentNode.next = newNode; 
+        }
+
+        this.length++;
 
     }
 
