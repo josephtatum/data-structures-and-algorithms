@@ -24,7 +24,7 @@ class AnimalShelter {
       }
       this.back = animal;
     } else {
-      console.log('We only take dogs and cats.');
+      return 'We only take cats and dogs.';
     }
   }
 
