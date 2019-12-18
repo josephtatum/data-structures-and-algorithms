@@ -1,3 +1,5 @@
+
+
 class Animal {
   constructor(name, type, next = null) {
     this.name = name,
@@ -29,16 +31,30 @@ class AnimalShelter {
   }
 
   dequeue(pref) {
-    if(pref === 'dog' || pref === 'cat') {
-      console.log(pref);
+    if(pref === 'dog') {
+      while(!this.isEmpty()) {
+        if(this.front.type === 'dog') {
+          return this.front;
+        } else {
+          this.front = this.front.next;
+        }
+      }
+    } else if(pref === 'cat') {
+      while(!this.isEmpty()) {
+        if(this.front.type === 'cat') {
+          return this.front;
+        } else {
+          this.front = this.next;
+        }
+      }
     } else {
-      return null;
+      return 'We dont have what youre looking for.';
     }
   }
 
-    isEmpty() {
-      return !this.front;
-    }
+  isEmpty() {
+    return !this.front;
+  }
 }
 
 module.exports = {

@@ -45,4 +45,27 @@ describe('Animal Shelter', () => {
     expect(animalShelter.enqueue(kangaroo)).toEqual('We only take cats and dogs.');
   });
 
+  it('should be able to dequeue a dog based on a specific preference', () => {
+    const animalShelter = new AnimalShelter();
+    const cat = new Animal('Lela', 'cat');
+    const dog = new Animal('Rosie', 'dog');
+    animalShelter.enqueue(cat);
+    animalShelter.enqueue(dog);
+    expect(animalShelter.dequeue('dog').type).toEqual('dog');
+  });
+
+  it('should be able to dequeue a cat based on a specific preference', () => {
+    const animalShelter = new AnimalShelter();
+    const cat = new Animal('Lela', 'cat');
+    const dog = new Animal('Rosie', 'dog');
+    animalShelter.enqueue(cat);
+    animalShelter.enqueue(dog);
+    expect(animalShelter.dequeue('cat').type).toEqual('cat');
+  });
+
+  it('should return a string if what the user is looking for is not available', () => {
+    const animalShelter = new AnimalShelter();
+    expect(animalShelter.dequeue('kangaroo')).toEqual('We dont have what youre looking for.');
+  });
+
 });
