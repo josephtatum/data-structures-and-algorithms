@@ -1,3 +1,3 @@
-# Table of Contents:
+# Breadth First Challenge
 
-1) [Reverse an Array](./challenges/arrayReverse/README.md)
+## I did an hours worht of research and whiteboarding for this code challenge. I do not know if my solution works as it's untested. I've included photos of my work in ./challenges/breadth-first/assets
